@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lets_plot.plot.geom &#8212; lets-plot 1.5.3.dev1 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="lets_plot.plot.geom.geom_abline" href="lets_plot.plot.geom.geom_abline.html" />
+    <link rel="prev" title="lets_plot.plot.facet.facet_grid" href="lets_plot.plot.facet.facet_grid.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Lets-Plot</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.5.3.dev1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../api.html">API</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart with Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../svg_export.html">SVG/HTML Export to File</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">lets_plot.plot.geom</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="module-lets_plot.plot.geom">
+<span id="lets-plot-plot-geom"></span><h1>lets_plot.plot.geom<a class="headerlink" href="#module-lets_plot.plot.geom" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_abline.html#lets_plot.plot.geom.geom_abline" title="lets_plot.plot.geom.geom_abline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_abline</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Add straight lines to a plot specified by slope and intercept.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_area.html#lets_plot.plot.geom.geom_area" title="lets_plot.plot.geom.geom_area"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_area</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Display an area.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_bar.html#lets_plot.plot.geom.geom_bar" title="lets_plot.plot.geom.geom_bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_bar</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Bar chart which makes the height of the bar proportional to the number of observed variable values, mapped to x axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_bin2d.html#lets_plot.plot.geom.geom_bin2d" title="lets_plot.plot.geom.geom_bin2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_bin2d</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Displays a 1d distribution by dividing variable mapped to x axis into bins and counting the number of observations in each bin.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_boxplot.html#lets_plot.plot.geom.geom_boxplot" title="lets_plot.plot.geom.geom_boxplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_boxplot</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mapping</strong> (<em>set of aesthetic mappings created by aes() function.</em>) – Aesthetic mappings describe the way that variables in the data are</p></li>
+</ul>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_contour.html#lets_plot.plot.geom.geom_contour" title="lets_plot.plot.geom.geom_contour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_contour</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p>Display contours of a 3d surface in 2d.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_contourf.html#lets_plot.plot.geom.geom_contourf" title="lets_plot.plot.geom.geom_contourf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_contourf</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p>Fill contours of a 3d surface in 2d.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_crossbar.html#lets_plot.plot.geom.geom_crossbar" title="lets_plot.plot.geom.geom_crossbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_crossbar</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p>Bar with horizontal median line</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_density.html#lets_plot.plot.geom.geom_density" title="lets_plot.plot.geom.geom_density"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_density</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p>Display density function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_density2d.html#lets_plot.plot.geom.geom_density2d" title="lets_plot.plot.geom.geom_density2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_density2d</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p>Display density function contour.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_density2df.html#lets_plot.plot.geom.geom_density2df" title="lets_plot.plot.geom.geom_density2df"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_density2df</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p>Fill density function contour.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_errorbar.html#lets_plot.plot.geom.geom_errorbar" title="lets_plot.plot.geom.geom_errorbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_errorbar</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p>Error bars</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_freqpoly.html#lets_plot.plot.geom.geom_freqpoly" title="lets_plot.plot.geom.geom_freqpoly"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_freqpoly</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p>Line chart which makes the y value proportional to the number of observed variable values, mapped to x axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_histogram.html#lets_plot.plot.geom.geom_histogram" title="lets_plot.plot.geom.geom_histogram"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_histogram</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p>Displays a 1d distribution by dividing variable mapped to x axis into bins and counting the number of observations in each bin.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_hline.html#lets_plot.plot.geom.geom_hline" title="lets_plot.plot.geom.geom_hline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_hline</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Add straight horizontal lines to a plot</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_jitter.html#lets_plot.plot.geom.geom_jitter" title="lets_plot.plot.geom.geom_jitter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_jitter</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Jittered Points, especially for discrete plots or dense plots.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_line.html#lets_plot.plot.geom.geom_line" title="lets_plot.plot.geom.geom_line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_line</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Connect points in order of the variable on the x-axis</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_linerange.html#lets_plot.plot.geom.geom_linerange" title="lets_plot.plot.geom.geom_linerange"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_linerange</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p>Line range, defined by an upper and lower value</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_map.html#lets_plot.plot.geom.geom_map" title="lets_plot.plot.geom.geom_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_map</span></code></a>([mapping, data, stat, show_legend, …])</p></td>
+<td><p>Display polygons from a reference map.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_path.html#lets_plot.plot.geom.geom_path" title="lets_plot.plot.geom.geom_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_path</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Connects observations in the order, how they appear in the data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_point.html#lets_plot.plot.geom.geom_point" title="lets_plot.plot.geom.geom_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_point</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Points, as for a scatter plot.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_pointrange.html#lets_plot.plot.geom.geom_pointrange" title="lets_plot.plot.geom.geom_pointrange"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_pointrange</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p>Vertical line defined by upper and lower value with mid-point at Y-location.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_polygon.html#lets_plot.plot.geom.geom_polygon" title="lets_plot.plot.geom.geom_polygon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_polygon</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p>Display a polygon (filled path).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_raster.html#lets_plot.plot.geom.geom_raster" title="lets_plot.plot.geom.geom_raster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_raster</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Rectangles with x, y values mapped to center.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_rect.html#lets_plot.plot.geom.geom_rect" title="lets_plot.plot.geom.geom_rect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_rect</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Draws rectangles</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_ribbon.html#lets_plot.plot.geom.geom_ribbon" title="lets_plot.plot.geom.geom_ribbon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_ribbon</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Display a ribbon.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_segment.html#lets_plot.plot.geom.geom_segment" title="lets_plot.plot.geom.geom_segment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_segment</span></code></a>([mapping, data, stat, …])</p></td>
+<td><p>Draws segments</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_smooth.html#lets_plot.plot.geom.geom_smooth" title="lets_plot.plot.geom.geom_smooth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_smooth</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Add a smoothed conditional mean.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_step.html#lets_plot.plot.geom.geom_step" title="lets_plot.plot.geom.geom_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_step</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Connects observations in the order, how they appear in the data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_text.html#lets_plot.plot.geom.geom_text" title="lets_plot.plot.geom.geom_text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_text</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Adds text directly to the plot.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_tile.html#lets_plot.plot.geom.geom_tile" title="lets_plot.plot.geom.geom_tile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_tile</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Rectangles with x, y values mapped to center</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="lets_plot.plot.geom.geom_vline.html#lets_plot.plot.geom.geom_vline" title="lets_plot.plot.geom.geom_vline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom_vline</span></code></a>([mapping, data, stat, position, …])</p></td>
+<td><p>Add straight vertical lines to a plot</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, JetBrains.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
