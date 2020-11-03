@@ -5,10 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lets_plot.ggsave &#8212; lets-plot 1.5.3.dev1 documentation</title>
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -61,12 +64,13 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart with Jupyter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/quickstart.html">Quickstart with Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/installation.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated_gallery/index.html">﻿Gallery</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../svg_export.html">SVG/HTML Export to File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/svg_export.html">SVG/HTML Export to File</a></li>
 </ul>
 </ul>
 </li>
@@ -114,7 +118,7 @@
 <h1>lets_plot.ggsave<a class="headerlink" href="#lets-plot-ggsave" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="lets_plot.ggsave">
-<code class="sig-prename descclassname">lets_plot.</code><code class="sig-name descname">ggsave</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plot</span><span class="p">:</span> <span class="n">Union<span class="p">[</span><a class="reference internal" href="lets_plot.plot.core.PlotSpec.html#lets_plot.plot.core.PlotSpec" title="lets_plot.plot.core.PlotSpec">lets_plot.plot.core.PlotSpec</a><span class="p">, </span><a class="reference internal" href="lets_plot.plot.plot.GGBunch.html#lets_plot.plot.plot.GGBunch" title="lets_plot.plot.plot.GGBunch">lets_plot.plot.plot.GGBunch</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">filename</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iframe</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#lets_plot.ggsave" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">lets_plot.</code><code class="sig-name descname">ggsave</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plot</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>lets_plot.plot.core.PlotSpec<span class="p">, </span>lets_plot.plot.plot.GGBunch<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">filename</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iframe</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#lets_plot.ggsave" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exports plot or “bunch” to a file.
 Supported formats: SVG, HTML.</p>
 <p>The exported file is created in directory ${user.dir}/lets-plot-images
@@ -155,7 +159,7 @@ Only applicable when exporting to HTML.</p></li>
     </p>
     <p>
         &copy; Copyright 2020, JetBrains.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.0.<br/>
     </p>
   </div>
 </footer>

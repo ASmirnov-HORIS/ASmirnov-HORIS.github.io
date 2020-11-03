@@ -5,10 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lets-Plot &#8212; lets-plot 1.5.3.dev1 documentation</title>
-    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gallery-dataframe.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -19,7 +22,7 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Quickstart with Jupyter" href="quickstart.html" />
+    <link rel="next" title="Quickstart with Jupyter" href="pages/quickstart.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -60,12 +63,13 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart with Jupyter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/quickstart.html">Quickstart with Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated_gallery/index.html">﻿Gallery</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="svg_export.html">SVG/HTML Export to File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/svg_export.html">SVG/HTML Export to File</a></li>
 </ul>
 </ul>
 </li>
@@ -83,6 +87,8 @@
 <li><a class="reference internal" href="#contents">Contents</a><ul>
 </ul>
 </li>
+<li><a class="reference internal" href="#grammar-of-graphics">Grammar of Graphics</a></li>
+<li><a class="reference internal" href="#features">Features</a></li>
 </ul>
 </li>
 </ul>
@@ -122,13 +128,31 @@
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart with Jupyter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/quickstart.html">Quickstart with Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated_gallery/index.html">﻿Gallery</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 </div>
+</div>
+<div class="section" id="grammar-of-graphics">
+<h2>Grammar of Graphics<a class="headerlink" href="#grammar-of-graphics" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="api.html#api-plotting"><span class="std std-ref">Plotting</span></a></p></li>
+<li><p><a class="reference internal" href="api.html#api-geometries"><span class="std std-ref">Geometries</span></a></p></li>
+<li><p><a class="reference internal" href="api.html#api-fsp"><span class="std std-ref">Facets and Scales</span></a></p></li>
+<li><p><a class="reference internal" href="api.html#api-coordinates"><span class="std std-ref">Coordinates</span></a></p></li>
+<li><p><a class="reference internal" href="api.html#api-theme"><span class="std std-ref">Theme</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="api.html#api-sampling"><span class="std std-ref">Sampling</span></a></p></li>
+<li><p><a class="reference internal" href="api.html#api-geospatial"><span class="std std-ref">Geospatial</span></a></p></li>
+</ul>
 </div>
 </div>
 
@@ -145,7 +169,7 @@
     </p>
     <p>
         &copy; Copyright 2020, JetBrains.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.0.<br/>
     </p>
   </div>
 </footer>
