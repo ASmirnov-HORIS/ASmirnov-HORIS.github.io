@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lets_plot.layer_tooltips &#8212; lets-plot 1.5.3.dev1 documentation</title>
+    <title>lets_plot.layer_tooltips &#8212; lets-plot 1.5.5.dev1 documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
@@ -49,7 +49,7 @@
         </button>
         <a class="navbar-brand" href="../index.html">
           Lets-Plot</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.5.3.dev1</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>1.5.5.dev1</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -124,41 +124,41 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul>
 <li><dl class="simple">
-<dt><strong>format()</strong> (<em>defines the format for displaying the value:</em>) –     .format(field = ‘density’, format = ‘.1f’)</dt><dd><p>.format(field = ‘$color’, format = ‘value is {.1f}’)</p>
+<dt><strong>format() defines the format for displaying the value</strong> –     .format(field = ‘density’, format = ‘.1f’)</dt><dd><p>.format(field = ‘^color’, format = ‘value is {.1f}’)</p>
 </dd>
 </dl>
 <p>This format will be applied to the mapped value in the default tooltip or to the corresponding value
 specified in the ‘line’ template.
-The field name starts with a ‘$’ prefix for aesthetics, variable names are specified without prefix.
+The field name starts with a ‘^’ prefix for aesthetics, variable names are specified without prefix.
 It’s possible to set the format for all positional aesthetics:</p>
 <blockquote>
-<div><p>field = “$X” - for all positional x;
-field = “$Y” - for all positional y.</p>
+<div><p>field = “^X” - for all positional x;
+field = “^Y” - for all positional y.</p>
 </div></blockquote>
 <p>The format contains a number format (‘1.f’) or a string template (‘{.1f}’).
 The numeric format for non-numeric value will be ignored.
 If you need to include a brace character in the literal text, it can be escaped by doubling: {{ and }}, e.g.,</p>
 <blockquote>
-<div><p>.format(‘$color’, ‘{{ {.1f} }}’) -&gt; “{ 17.0 }”
+<div><p>.format(‘^color’, ‘{{ {.1f} }}’) -&gt; “{ 17.0 }”
 .format(‘model’, ‘{} {{text}}’) -&gt; “mustang {text}”</p>
 </div></blockquote>
 <p>The string template in format will allow to change lines for the default tooltip without ‘line’ specifying.
 Also the template will change the line for outliers.
 Aes and var formats are not interchangeable, i.e. var format will not be applied to aes, mapped to this variable.</p>
 </li>
-<li><p><strong>line()</strong> (<em>line to show in the tooltip.</em>) – Adds a line template to the tooltip with a label.
+<li><p><strong>line() - line to show in the tooltip.</strong> – Adds a line template to the tooltip with a label.
 Variables and aesthetics can be accessed via a special syntax:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>$color for aes</p></li>
+<li><p>^color for aes</p></li>
 <li><p>&#64;year for variable</p></li>
 <li><p>&#64;{number of cylinders} for variable with spaces in the name</p></li>
-<li><p>&#64;{income in $} for variable with spaces and dollar sign in the name</p></li>
-<li><p>&#64;nameWith$ for the variable with dollar sign in its name</p></li>
+<li><p>&#64;{square m^2} for variable with spaces and ‘^’ symbol in the name</p></li>
+<li><p>&#64;nameWith^ for the variable with ‘^’ symbol in its name</p></li>
 </ul>
 </div></blockquote>
 <dl class="simple">
-<dt>A dollar sign can be escaped with a backslash, a brace character in the literal text - by doubling:</dt><dd><p>.line(‘text’) -&gt; “text”
+<dt>A ‘^’ symbol can be escaped with a backslash, a brace character in the literal text - by doubling:</dt><dd><p>.line(‘text’) -&gt; “text”
 .line(‘{{text}}’) -&gt; “{text}”
 .line(<a class="reference external" href="mailto:'&#37;&#52;&#48;model">‘<span>&#64;</span>model</a>’) -&gt; “mustang”
 .line(<a class="reference external" href="mailto:'{{&#37;&#52;&#48;model">‘{{<span>&#64;</span>model</a>}}’) -&gt; “{mustang}”</p>
@@ -173,10 +173,10 @@ Within the tooltip line the label is left-aligned, the formed by template string
 If a label is not specified, the string will be centered in the tooltip. For example:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>line(‘$color’): no label, value is centered;</p></li>
-<li><p>line(‘<a href="#id1"><span class="problematic" id="id2">|</span></a>$color’): label is empty, value is right-aligned;</p></li>
-<li><p>line(<a class="reference external" href="mailto:'&#37;&#52;&#48;|$color">‘<span>&#64;</span>|$color</a>’): default label is used, value is right-aligned;</p></li>
-<li><p>line(‘my label|$color’): label is specified, value is right-aligned.</p></li>
+<li><p>line(‘^color’): no label, value is centered;</p></li>
+<li><p>line(‘<a href="#id1"><span class="problematic" id="id2">|</span></a>^color’): label is empty, value is right-aligned;</p></li>
+<li><p>line(<a class="reference external" href="mailto:'&#37;&#52;&#48;|^color">‘<span>&#64;</span>|^color</a>’): default label is used, value is right-aligned;</p></li>
+<li><p>line(‘my label|^color’): label is specified, value is right-aligned.</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -201,7 +201,7 @@ If a label is not specified, the string will be centered in the tooltip. For exa
 <span class="gp">... </span>               <span class="n">tooltips</span><span class="o">=</span><span class="n">layer_tooltips</span><span class="p">()</span>
 <span class="gp">... </span>                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;hwy&#39;</span><span class="p">,</span> <span class="s1">&#39;.1f&#39;</span><span class="p">)</span>              <span class="c1"># set the format for the variable value</span>
 <span class="gp">... </span>                        <span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">&#39;@manufacturer @model&#39;</span><span class="p">)</span>      <span class="c1"># &quot;    ford mustang    &quot;</span>
-<span class="gp">... </span>                        <span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">&#39;cty/hwy|$color/@hwy&#39;</span><span class="p">)</span>       <span class="c1"># &quot;cty/hwy    17.0/26.0&quot;</span>
+<span class="gp">... </span>                        <span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">&#39;cty/hwy|^color/@hwy&#39;</span><span class="p">)</span>       <span class="c1"># &quot;cty/hwy    17.0/26.0&quot;</span>
 <span class="gp">... </span>                        <span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">&#39;@|@class&#39;</span><span class="p">)</span>                  <span class="c1"># &quot;class     subcompact&quot;</span>
 <span class="gp">... </span>                        <span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">&#39;|@year&#39;</span><span class="p">)</span>                    <span class="c1"># &quot;                2008&quot;</span>
 <span class="gp">... </span>                        <span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">&#39;--[mpg dataset] --&#39;</span><span class="p">))</span>       <span class="c1"># &quot; --[mpg dataset] -- &quot;</span>
