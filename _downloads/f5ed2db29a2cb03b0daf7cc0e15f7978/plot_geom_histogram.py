@@ -6,19 +6,19 @@ An example with the geom_histogram() geometry.
 
 """
 
-# sphinx_gallery_thumbnail_path = "E:\Projects\DataPad\Subprojects\LetsPlot\MyFork\lets-plot\docs\sphinx-doc\source\examples\plot_geom_histogram.png"
+# sphinx_gallery_thumbnail_path = "E:\Projects\DataPad\Subprojects\LetsPlot\MyFork\lets-plot\docs\sphinx-doc\source\examples\geom_histogram.png"
 
 import numpy as np
 
 from lets_plot import *
 LetsPlot.setup_html()
 
-#%%
+# %%
 
 np.random.seed(42)
 data = {'x': np.random.normal(0, 1, size=1000)}
 
-#%%
+# %%
 
 ggplot(data) + \
     geom_histogram(aes(x='x'))
