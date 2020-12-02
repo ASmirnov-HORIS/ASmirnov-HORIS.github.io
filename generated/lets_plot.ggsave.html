@@ -126,12 +126,12 @@ if not specified otherwise (see the <cite>path</cite> parameter).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>plot</strong> (<em>Plot or GGBunch.</em>) – Plot specification to export.</p></li>
-<li><p><strong>filename</strong> (<em>str</em>) – The name of file. It mast end with a file extention corresponding
-to one of the supported formats: svg, html (or htm)</p></li>
-<li><p><strong>path</strong> (<em>str</em>) – Path to a directory to save image files in.
-By default it is <cite>${user.dir}/lets-plot-images</cite></p></li>
-<li><p><strong>iframe</strong> (<em>bool</em>) – Whether to wrap HTML page into a iFrame. Default value is True.
+<li><p><strong>plot</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">PlotSpec</span></code> or <a class="reference internal" href="lets_plot.GGBunch.html#lets_plot.GGBunch" title="lets_plot.GGBunch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GGBunch</span></code></a>) – plot specification to export.</p></li>
+<li><p><strong>filename</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>) – the name of file. It must end with a file extention corresponding
+to one of the supported formats: svg, html (or htm).</p></li>
+<li><p><strong>path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>) – path to a directory to save image files in. By default it is
+<cite>${user.dir}/lets-plot-images</cite>.</p></li>
+<li><p><strong>iframe</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code>) – whether to wrap HTML page into a iFrame. Default value is True.
 Only applicable when exporting to HTML.</p></li>
 </ul>
 </dd>
@@ -139,7 +139,7 @@ Only applicable when exporting to HTML.</p></li>
 <dd class="field-even"><p>Absolute pathname of created HTML file.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
