@@ -125,8 +125,9 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">DataFrame</span></code>, optional) – default dataset to use for the plot. If not specified,
 must be supplied in each layer added to the plot.</p></li>
-<li><p><strong>mapping</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code>, optional) – default list of aesthetic mappings to use for the plot.
-If not specified, must be supplied in each layer added to the plot.</p></li>
+<li><p><strong>mapping</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">FeatureSpec</span></code>, optional) – default list of aesthetic mappings created by aes() function to use
+for the plot. If not specified, must be supplied in each layer
+added to the plot.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -207,7 +208,7 @@ var i=n(!function(){var t=new Error("Cannot find module 'buffer'");throw t.code=
 //# sourceMappingURL=js-package.js.map
             </script>
 
-</div><div class="output text_html">   <div id="ILFWxY"></div>
+</div><div class="output text_html">   <div id="zddMEO"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
        (function() {
            var plotSpec={
@@ -231,7 +232,7 @@ var i=n(!function(){var t=new Error("Cannot find module 'buffer'");throw t.code=
 }
 }]
 };
-           var plotContainer = document.getElementById("ILFWxY");
+           var plotContainer = document.getElementById("zddMEO");
            window.letsPlotCall(function() {{
                LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
            }});
