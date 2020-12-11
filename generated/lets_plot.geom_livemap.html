@@ -119,8 +119,8 @@
 <h1>lets_plot.geom_livemap<a class="headerlink" href="#lets-plot-geom-livemap" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="lets_plot.geom_livemap">
-<code class="sig-prename descclassname">lets_plot.</code><code class="sig-name descname">geom_livemap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mapping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">symbol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">show_legend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sampling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zoom</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">projection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">geodesic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_join</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">other_args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geom_livemap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Display a live map.</p>
+<code class="sig-prename descclassname">lets_plot.</code><code class="sig-name descname">geom_livemap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mapping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">show_legend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sampling</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tooltips</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">map_join</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">symbol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zoom</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">projection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">geodesic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tiles</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">other_args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#lets_plot.geom_livemap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display an interactive map.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -128,6 +128,9 @@
 mapped to plot “aesthetics”.</p></li>
 <li><p><strong>data</strong> (<em>dictionary or pandas DataFrame, optional</em>) – The data to be displayed in this layer. If None, the default, the data
 is inherited from the plot data as specified in the call to ggplot.</p></li>
+<li><p><strong>show_legend</strong> (<em>bool</em>) – True - do not show legend for this layer.</p></li>
+<li><p><strong>sampling</strong> (<em>result of the call to the sampling_xxx() function.</em>) – Value ‘none’ will disable sampling for this layer.</p></li>
+<li><p><strong>tooltips</strong> (<em>result of the call to the layer_tooltips() function.</em>) – Specifies appearance, style and content.</p></li>
 <li><p><strong>map</strong> (<em>GeoDataFrame (supported shapes Point and MultiPoint) or Regions (implicitly invoke centroids())</em>) – Data containing coordinates of points.</p></li>
 <li><p><strong>map_join</strong> (<em>str, pair, optional</em>) – Pair of names used to join map coordinates with data.
 str is allowed only when used with Regions object - map key ‘request’ will be automatically added.
@@ -142,12 +145,13 @@ There are [lon1, lat1, lon2, lat2,…, lonN, latN].
 - lon1, lon2,…, lonN are longitudes in degrees (positive in the Eastern hemisphere).
 - lat1, lat2,…, latN are latitudes in degrees (positive in the Northern hemisphere).</p></li>
 <li><p><strong>zoom</strong> (<em>integer, optional</em>) – Zoom of the map in the range 1 - 15.</p></li>
-<li><p><strong>tiles</strong> (<em>string, optional</em>) – Tiles provider, either as a string - URL for a standard raster ZXY tile provider with {z}, {x} and {y} wildcards
-(e.g. ‘<a class="reference external" href="http://my.tile.com">http://my.tile.com</a>/{z}/{x}/{y}.png’) or the result of a call to a maptiles_xxx functions</p></li>
 <li><p><strong>projection</strong> (<em>string, optional</em>) – The map projection. There are:
 - ‘epsg3857’ for Mercator projection (default).
-- ‘epsg4326’ for Equirectangular projection.</p></li>
+- ‘epsg4326’ for Equirectangular projection.
+Note: ‘projection’ only works with vector map tiles (i.e. Lets-Plot map tiles)</p></li>
 <li><p><strong>geodesic</strong> (<em>True (default) or False, optional</em>) – Enables geodesic type of all paths and segments</p></li>
+<li><p><strong>tiles</strong> (<em>string, optional</em>) – Tiles provider, either as a string - URL for a standard raster ZXY tile provider with {z}, {x} and {y} wildcards
+(e.g. ‘<a class="reference external" href="http://my.tile.com">http://my.tile.com</a>/{z}/{x}/{y}.png’) or the result of a call to a maptiles_xxx functions</p></li>
 <li><p><strong>other_args</strong> – Other arguments passed on to layer. These are often aesthetics settings, used to set an aesthetic to a fixed
 value, like color = “red”, fill = “blue”, size = 3, stroke = 2 or shape = 21. They may also be parameters to
 the paired geom/stat.</p></li>
@@ -189,6 +193,18 @@ geom_livemap understands the following aesthetics mappings:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">ggplot</span><span class="p">()</span> <span class="o">+</span> <span class="n">geom_livemap</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">+=</span> <span class="n">ggtitle</span><span class="p">(</span><span class="s1">&#39;Live Map&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">lets_plot</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">LetsPlot</span><span class="o">.</span><span class="n">setup_html</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lon</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">73.935242</span><span class="p">,</span> <span class="o">-</span><span class="mf">118.243683</span><span class="p">,</span> <span class="o">-</span><span class="mf">87.623177</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lat</span> <span class="o">=</span> <span class="p">[</span><span class="mf">40.730610</span><span class="p">,</span> <span class="mf">34.052235</span><span class="p">,</span> <span class="mf">41.881832</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ggplot</span><span class="p">()</span> <span class="o">+</span> <span class="n">geom_livemap</span><span class="p">()</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="nb">map</span><span class="o">=</span><span class="n">gdf</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
